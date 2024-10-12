@@ -77,7 +77,7 @@
 
   <div class="flex flex-col min-h-screen">
     <!-- Fixed Table of Contents -->
-    <nav class="table-of-contents">
+    <nav class="table-of-contents bg-white">
       <a
         href=""
         on:click|preventDefault="{() => handleLinkClick('about')}"
@@ -108,7 +108,7 @@
   
     <!-- Main Content -->
     <main class="flex-1">
-    <BackgroundBoxes />
+    <!-- <BackgroundBoxes /> -->
       {#if activeSection === 'about'}
         <!-- About Section -->
         <section
