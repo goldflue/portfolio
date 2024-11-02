@@ -1,13 +1,11 @@
 <script lang="ts">
-    import { fade, fly, type TransitionConfig } from 'svelte/transition';
-    import { quintOut } from 'svelte/easing';
     import { Badge } from '@/components/ui/badge';
+    import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
     import { Tooltip } from '@/components/ui/tooltip';
-    import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
+    import { quintOut } from 'svelte/easing';
+    import { fade, type TransitionConfig } from 'svelte/transition';
     // import Header from '@/components/ui/header/header.svelte';
-    import BackgroundBoxes from '@/components/ui/background-boxes/background-boxes.svelte';
     let activeSection: string = 'about';
-  
     const inConfig = {
         duration: 500, 
         delay: 500
@@ -43,9 +41,13 @@
       text-decoration: none;
       font-weight: bold;
     }
+    html {
+  scroll-behavior: smooth;
+}
+
   
     .table-of-contents a.active {
-      color: var(--primary-color, #007BFF);
+      color: var(--ring-color);
     }
   
     /* Adjust main content margin to accommodate the table of contents */
