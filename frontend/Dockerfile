@@ -5,13 +5,13 @@ FROM node:18
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY frontend/portfolio-app/package*.json ./
+COPY /portfolio-app/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of your application code
-COPY frontend/portfolio-app .
+COPY /portfolio-app .
 
 # Build the SvelteKit application
 RUN npm run build
